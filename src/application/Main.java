@@ -11,26 +11,22 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	
 	
-	public static void main(String[] args) {
-		launch(args);
-	}
+	  public void start(Stage primaryStage) throws Exception {
+	        // Load the FXML for the login page
+	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main.fxml"));
+	        Parent root = loader.load();
 
-	public void start(Stage InitatStage) {
-		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/Main.fxml"));
-			Scene scene = new Scene(root,525,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			
-			InitatStage.setResizable(false); 
-			InitatStage.setScene(scene);
-			InitatStage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		
-		
-		
-		
+	        // Set the login stage for the controller
+	        Controller loginController = loader.getController();
+	        loginController.setLoginStage(primaryStage);
+
+	        primaryStage.setTitle("Login");
+	        primaryStage.setScene(new Scene(root, 500, 400));
+	        primaryStage.show();
+	        primaryStage.setResizable(false);
+	    }
+
+	    public static void main(String[] args) {
+	        launch(args);
+	    }
 	}
-}

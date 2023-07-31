@@ -4,20 +4,24 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import java.io.IOException;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-public class Controller {
+import java.io.IOException;
 
+public class Controller {
     @FXML
     private TextField userIDField;
     @FXML
-    private TextField passwordField; 
+    private TextField passwordField;
+
+    private Stage loginStage; // Reference to the login stage
+
+    // Setter method to set the login stage
+    public void setLoginStage(Stage loginStage) {
+        this.loginStage = loginStage;
+    }
 
     public void Login(ActionEvent e) {
         // Define the preset strings that are required to open the new dashboard window
@@ -42,6 +46,11 @@ public class Controller {
 
                 // Show the dashboard window
                 dashboardStage.show();
+                dashboardStage.setWidth(800);
+                dashboardStage.setHeight(600);
+                dashboardStage.setResizable(false);
+                // Close the login stage
+                loginStage.close();
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -52,7 +61,6 @@ public class Controller {
         }
     }
 }
-
 
 
 
