@@ -20,44 +20,40 @@ public class Controller {
     @FXML
     private TextField passwordField;
 
-    private Stage loginStage; // Reference to the login stage
+    private Stage loginStage; 
 
-    // Setter method to set the login stage
+ 
     public void setLoginStage(Stage loginStage) {
         this.loginStage = loginStage;
     }
 
     public void Login(ActionEvent e) {
-        // Define the map of acceptable usernames and passwords
+        
         Map<String, String> acceptableUsers = new HashMap<>();
         acceptableUsers.put("nate", "wardy");
         acceptableUsers.put("Password", "User");
         acceptableUsers.put("noah", "wardy");
-        
-        // Retrieve the input from the text fields
+
+     
         String enteredUserID = userIDField.getText();
         String enteredPassword = passwordField.getText();
 
-        // Check if the entered UserID and Password match the preset strings
+       
         if (acceptableUsers.containsKey(enteredUserID) && acceptableUsers.get(enteredUserID).equals(enteredPassword)) {
             try {
-                // Load the FXML file for the dashboard window
-                Parent dashboardRoot = FXMLLoader.load(getClass().getResource("/hub.fxml"));
-                Scene dashboardScene = new Scene(dashboardRoot, 390, 330);
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/hub.fxml"));
+                Parent dashboardRoot = loader.load();
+                HubController hubController = loader.getController();
+                hubController.setHubStage(loginStage); 
 
-                // Create a new stage for the dashboard window
-                Stage dashboardStage = new Stage();
-                dashboardStage.setTitle("Dashboard");
-                dashboardStage.setScene(dashboardScene);
+                Scene dashboardScene = new Scene(dashboardRoot, 850, 620);
+                loginStage.setTitle("Dashboard"); 
+                loginStage.setScene(dashboardScene); 
+                loginStage.setWidth(850);
+                loginStage.setHeight(620);
+                loginStage.setResizable(false);
 
-                // Show the dashboard window
-                dashboardStage.show();
-                dashboardStage.setWidth(850);
-                dashboardStage.setHeight(620);
-                dashboardStage.setResizable(false);
-             
-                // Close the login stage
-                loginStage.close();
+               
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -67,12 +63,18 @@ public class Controller {
             alert.setHeaderText(null);
             alert.setContentText("Invalid Credentials"); 
             alert.showAndWait();
-            
         }
     }
-	
+    public void openHub() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Hub.fxml")); 
+        Parent root = loader.load();
+        
+        HubController hubController = loader.getController();
+        hubController.setHubStage(loginStage);
 
-	}
-
-
-
+        loginStage.setScene(new Scene(root, 850, 620));
+        loginStage.setTitle("Hub");
+        loginStage.setResizable(false);
+    }
+}
+    
