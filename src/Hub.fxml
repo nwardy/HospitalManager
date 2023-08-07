@@ -3,17 +3,21 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="848.0" fx:controller="application.HubController" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HubController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8f7ff" height="585.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="199.0" />
-      <Button layoutX="22.0" layoutY="227.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="152.0" text="New Record" onAction="#showNewRecord"/>
-      <Button layoutX="22.0" layoutY="307.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="152.0" text="Add Diagnosis Info" onAction="#showAddInfo"/>
-      <Button layoutX="22.0" layoutY="150.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="152.0" text="Quick View"  onAction="#showQuickView" />
-      <Button layoutX="14.0" layoutY="530.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="128.0" text="Logout" />
-      <Button layoutX="22.0" layoutY="384.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="152.0" text="Appointments" onAction="#showAppointments"/>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="351.0" layoutX="310.0" layoutY="139.0" stroke="BLACK" strokeType="INSIDE" width="390.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8f7ff" height="585.0" layoutX="-2.0" stroke="#d8f7ff" strokeType="INSIDE" width="199.0" />
+      <Button layoutX="22.0" layoutY="227.0" mnemonicParsing="false" onAction="#showNewRecord" prefHeight="66.0" prefWidth="152.0" text="New Record" />
+      <Button layoutX="22.0" layoutY="307.0" mnemonicParsing="false" onAction="#showAddInfo" prefHeight="66.0" prefWidth="152.0" text="Add Diagnosis Info" />
+      <Button layoutX="22.0" layoutY="150.0" mnemonicParsing="false" onAction="#showQuickView" prefHeight="66.0" prefWidth="152.0" text="Quick View" />
+      <Button layoutX="14.0" layoutY="530.0" mnemonicParsing="false" onAction="#logout" prefHeight="41.0" prefWidth="128.0" text="Logout" />
+      <Button layoutX="22.0" layoutY="384.0" mnemonicParsing="false" onAction="#showAppointments" prefHeight="66.0" prefWidth="152.0" text="Appointments" />
       <Label layoutX="30.0" layoutY="24.0" text="MediHub">
          <font>
             <Font name="Segoe UI" size="33.0" />
@@ -24,7 +28,29 @@
             <Font name="Segoe UI Light Italic" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="22.0" layoutY="384.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="152.0" text="Appointments" />
+      <Button layoutX="22.0" layoutY="384.0" mnemonicParsing="false" onAction="#showAppointments" prefHeight="66.0" prefWidth="152.0" text="Appointments" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="351.0" layoutX="287.0" layoutY="124.0" opacity="0.98" stroke="BLACK" strokeType="INSIDE" width="390.0">
+         <fill>
+            <LinearGradient endX="0.07582938388625593" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8470588326454163" green="0.9686274528503418" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="342.0" layoutY="255.0" prefHeight="75.0" prefWidth="281.0" text="Welcome Back Admin">
+         <font>
+            <Font name="Segoe UI Light" size="29.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
-
