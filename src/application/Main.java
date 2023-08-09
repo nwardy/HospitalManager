@@ -11,13 +11,15 @@ public class Main extends Application {
      
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/main.fxml"));
         Parent root = loader.load();
-
-       
+        
+        String css = this.getClass().getResource("application.css").toExternalForm();
+        root.getStylesheets().add(css);
+        
         Controller loginController = loader.getController();
         loginController.setLoginStage(primaryStage);
 
         primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root, 500, 400));
+        primaryStage.setScene(new Scene(root, 650, 400));
         primaryStage.show();
         primaryStage.setResizable(false);
     }

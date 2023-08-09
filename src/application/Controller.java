@@ -29,7 +29,8 @@ public class Controller {
 
     public void Login(ActionEvent e) {
         
-        Map<String, String> acceptableUsers = new HashMap<>();
+    	//hashmap used for testing will include secure database in future development
+        Map<String, String> acceptableUsers = new HashMap<>(); 
         acceptableUsers.put("nate", "wardy");
         acceptableUsers.put("Password", "User");
         acceptableUsers.put("noah", "wardy");
@@ -45,9 +46,12 @@ public class Controller {
                 Parent dashboardRoot = loader.load();
                 HubController hubController = loader.getController();
                 hubController.setHubStage(loginStage); 
-
                 Scene dashboardScene = new Scene(dashboardRoot, 850, 620);
                 loginStage.setTitle("Dashboard"); 
+                
+               String css = this.getClass().getResource("application.css").toExternalForm();
+               dashboardScene.getStylesheets().add(css);
+                
                 loginStage.setScene(dashboardScene); 
                 loginStage.setWidth(850);
                 loginStage.setHeight(620);

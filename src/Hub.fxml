@@ -11,7 +11,6 @@
 
 <AnchorPane maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HubController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="351.0" layoutX="310.0" layoutY="139.0" stroke="BLACK" strokeType="INSIDE" width="390.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8f7ff" height="585.0" layoutX="-2.0" stroke="#d8f7ff" strokeType="INSIDE" width="199.0" />
       <Button layoutX="22.0" layoutY="227.0" mnemonicParsing="false" onAction="#showNewRecord" prefHeight="66.0" prefWidth="152.0" text="New Record" />
       <Button layoutX="22.0" layoutY="307.0" mnemonicParsing="false" onAction="#showAddInfo" prefHeight="66.0" prefWidth="152.0" text="Add Diagnosis Info" />
@@ -29,7 +28,7 @@
          </font>
       </Label>
       <Button layoutX="22.0" layoutY="384.0" mnemonicParsing="false" onAction="#showAppointments" prefHeight="66.0" prefWidth="152.0" text="Appointments" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="351.0" layoutX="287.0" layoutY="124.0" opacity="0.98" stroke="BLACK" strokeType="INSIDE" width="390.0">
+      <Rectangle fx:id="welcomeBox" arcHeight="5.0" arcWidth="5.0" height="351.0" layoutX="287.0" layoutY="124.0" opacity="0.98" stroke="BLACK" strokeType="INSIDE" width="390.0">
          <fill>
             <LinearGradient endX="0.07582938388625593" endY="1.0" startX="1.0">
                <stops>
@@ -47,7 +46,7 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Label layoutX="342.0" layoutY="255.0" prefHeight="75.0" prefWidth="281.0" text="Welcome Back Admin">
+      <Label fx:id="welcomeLabel" layoutX="342.0" layoutY="255.0" prefHeight="75.0" prefWidth="281.0" text="Welcome Back Admin">
          <font>
             <Font name="Segoe UI Light" size="29.0" />
          </font>

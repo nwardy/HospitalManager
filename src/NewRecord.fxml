@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"  >
    <children>
       <Rectangle fx:id="subtitlerec" arcHeight="5.0" arcWidth="5.0" fill="#cdf5ff" height="66.0" layoutX="222.0" layoutY="15.0" stroke="#cdf5ff" strokeLineCap="ROUND" strokeType="INSIDE" width="305.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8f7ff" height="585.0" layoutX="-2.0" stroke="#d8f7ff" strokeType="INSIDE" width="199.0" />
@@ -33,15 +33,14 @@
             <Font name="Segoe UI" size="30.0" />
          </font></Label>
       <Rectangle fx:id="mainviewbox" arcHeight="5.0" arcWidth="5.0" fill="#cdf5ff" height="465.0" layoutX="222.0" layoutY="94.0" stroke="#cdf5ff" strokeLineCap="ROUND" strokeType="INSIDE" width="597.0" />
-      <TextField layoutX="274.0" layoutY="151.0" promptText="First" />
-      <TextField layoutX="440.0" layoutY="151.0" promptText="Middle" />
-      <TextField layoutX="610.0" layoutY="151.0" promptText="Last" />
-      <TextField layoutX="275.0" layoutY="260.0" prefHeight="25.0" prefWidth="181.0" promptText="example@email.com" />
-      <TextField layoutX="274.0" layoutY="204.0" prefHeight="25.0" prefWidth="99.0" promptText="YYYY/MM/DD" />
-      <TextField layoutX="468.0" layoutY="260.0" prefHeight="25.0" prefWidth="128.0" promptText="(123)-4567-890" />
-      <TextField layoutX="396.0" layoutY="204.0" prefHeight="25.0" prefWidth="360.0" promptText="1234 Road Street, City State Zipcode" />
+      <TextField fx:id="FirstIn" layoutX="274.0" layoutY="151.0" promptText="First" />
+      <TextField fx:id="MiddleIn" layoutX="440.0" layoutY="151.0" promptText="Middle" />
+      <TextField fx:id="lastin" layoutX="610.0" layoutY="151.0" promptText="Last" />
+      <TextField fx:id="emailin" layoutX="275.0" layoutY="260.0" prefHeight="25.0" prefWidth="341.0" promptText="example@email.com" />
+      <TextField fx:id="birthin" layoutX="274.0" layoutY="204.0" prefHeight="25.0" prefWidth="99.0" promptText="YYYY/MM/DD" />
+      <TextField fx:id="phonein" layoutX="628.0" layoutY="260.0" prefHeight="25.0" prefWidth="128.0" promptText="(123)-4567-890" />
+      <TextField fx:id="addressin" layoutX="396.0" layoutY="204.0" prefHeight="25.0" prefWidth="360.0" promptText="1234 Road Street, City State Zipcode" />
       <TextArea layoutX="275.0" layoutY="310.0" prefHeight="164.0" prefWidth="485.0" promptText="Intake Notes" />
-      <TextField layoutX="610.0" layoutY="260.0" prefHeight="25.0" prefWidth="149.0" promptText="(123)-4567-890" />
-      <Button layoutX="456.0" layoutY="496.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="117.0" text="Submit" />
+      <Button layoutX="456.0" layoutY="496.0" mnemonicParsing="false" onAction="#addPatient" prefHeight="45.0" prefWidth="117.0" text="Submit" />
    </children>
 </AnchorPane>
