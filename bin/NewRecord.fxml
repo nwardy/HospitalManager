@@ -5,13 +5,14 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"  >
+<AnchorPane maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle fx:id="subtitlerec" arcHeight="5.0" arcWidth="5.0" fill="#cdf5ff" height="66.0" layoutX="222.0" layoutY="15.0" stroke="#cdf5ff" strokeLineCap="ROUND" strokeType="INSIDE" width="305.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8f7ff" height="585.0" layoutX="-2.0" stroke="#d8f7ff" strokeType="INSIDE" width="199.0" />
+      <Rectangle fx:id="subtitlerec" arcHeight="5.0" arcWidth="5.0" fill="#2a8eda" height="66.0" layoutX="222.0" layoutY="15.0" stroke="#a4a4a4" strokeLineCap="ROUND" strokeType="INSIDE" width="305.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a8eda" height="585.0" layoutX="-2.0" stroke="#d8f7ff" strokeType="INSIDE" width="199.0" />
       <Button layoutX="22.0" layoutY="227.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="152.0" text="New Record" />
       <Button layoutX="22.0" layoutY="307.0" mnemonicParsing="false" onAction="#showAddInfo" prefHeight="66.0" prefWidth="152.0" text="Add Diagnosis Info" />
       <Button layoutX="22.0" layoutY="150.0" mnemonicParsing="false" onAction="#showQuickView" prefHeight="66.0" prefWidth="152.0" text="Quick View" />
@@ -19,7 +20,7 @@
        <Button layoutX="22.0" layoutY="384.0" mnemonicParsing="false" onAction="#showAppointments" prefHeight="66.0" prefWidth="152.0" text="Appointments" />
       <Label layoutX="30.0" layoutY="24.0" text="MediHub">
          <font>
-            <Font name="Segoe UI" size="33.0" />
+            <Font name="Segoe UI light" size="33.0" />
          </font>
       </Label>
       <Label layoutX="30.0" layoutY="65.0" prefHeight="20.0" prefWidth="74.0" text="DashBoard">
@@ -30,9 +31,9 @@
      
       <Label fx:id="subtitlelabel" layoutX="242.0" layoutY="25.0" prefHeight="45.0" prefWidth="272.0" text="New Patient Record">
          <font>
-            <Font name="Segoe UI" size="30.0" />
+            <Font name="Segoe UI light" size="30.0" />
          </font></Label>
-      <Rectangle fx:id="mainviewbox" arcHeight="5.0" arcWidth="5.0" fill="#cdf5ff" height="465.0" layoutX="222.0" layoutY="94.0" stroke="#cdf5ff" strokeLineCap="ROUND" strokeType="INSIDE" width="597.0" />
+      <Rectangle fx:id="mainviewbox" arcHeight="5.0" arcWidth="5.0" fill="#2a8eda" height="465.0" layoutX="222.0" layoutY="94.0" stroke="#a4a4a4" strokeLineCap="ROUND" strokeType="INSIDE" width="597.0" />
       <TextField fx:id="FirstIn" layoutX="274.0" layoutY="151.0" promptText="First" />
       <TextField fx:id="MiddleIn" layoutX="440.0" layoutY="151.0" promptText="Middle" />
       <TextField fx:id="lastin" layoutX="610.0" layoutY="151.0" promptText="Last" />
@@ -42,5 +43,13 @@
       <TextField fx:id="addressin" layoutX="396.0" layoutY="204.0" prefHeight="25.0" prefWidth="360.0" promptText="1234 Road Street, City State Zipcode" />
       <TextArea layoutX="275.0" layoutY="310.0" prefHeight="164.0" prefWidth="485.0" promptText="Intake Notes" />
       <Button layoutX="456.0" layoutY="496.0" mnemonicParsing="false" onAction="#addPatient" prefHeight="45.0" prefWidth="117.0" text="Submit" />
+      <Label fx:id="subtitlelabel1" layoutX="242.0" layoutY="109.0" prefHeight="41.0" prefWidth="183.0" text="Enter New Patient Info">
+         <font>
+            <Font name="Segoe UI Light" size="14.0" />
+         </font>
+      </Label>
+      <Line endX="-138.0" endY="510.0" layoutX="335.0" layoutY="75.0" startX="-138.0" startY="-75.0" stroke="#a4a4a4" />
+      
    </children>
+  
 </AnchorPane>

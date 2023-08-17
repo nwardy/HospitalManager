@@ -19,7 +19,7 @@ public class Main extends Application {
         loginController.setLoginStage(primaryStage);
 
         primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root, 650, 400));
+        primaryStage.setScene(new Scene(root, 684, 405));
         primaryStage.show();
         primaryStage.setResizable(false);
     }

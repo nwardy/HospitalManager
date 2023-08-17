@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -17,7 +18,7 @@
       <Button layoutX="14.0" layoutY="530.0" mnemonicParsing="false" onAction="#logout" prefHeight="41.0" prefWidth="128.0" text="Logout" />
       <Label layoutX="30.0" layoutY="24.0" text="MediHub">
          <font>
-            <Font name="Segoe UI" size="33.0" />
+            <Font name="Segoe UI light" size="33.0" />
          </font>
       </Label>
       <Label layoutX="30.0" layoutY="65.0" prefHeight="20.0" prefWidth="74.0" text="DashBoard">
@@ -30,14 +31,25 @@
 
       <Label fx:id="subtitlelabel" layoutX="242.0" layoutY="25.0" prefHeight="45.0" prefWidth="222.0" text="Add Patient Info">
          <font>
-            <Font name="Segoe UI" size="30.0" />
+            <Font name="Segoe UI light" size="30.0" />
          </font>
          </Label> 
       <Button layoutX="22.0" layoutY="384.0" mnemonicParsing="false" onAction="#showAppointments" prefHeight="66.0" prefWidth="152.0" text="Appointments" />
-      <TextField layoutX="272.0" layoutY="150.0" />
-      <TextField layoutX="437.0" layoutY="150.0" />
-      <TextField layoutX="609.0" layoutY="150.0" />
-      <TextArea layoutX="272.0" layoutY="207.0" prefHeight="283.0" prefWidth="490.0" />
-      
+      <TextField layoutX="272.0" layoutY="150.0" promptText="First Name" />
+      <TextField layoutX="437.0" layoutY="150.0" promptText="Last Name" />
+      <TextField layoutX="609.0" layoutY="150.0" promptText="(123)-4567-890" />
+      <TextArea layoutX="276.0" layoutY="216.0" prefHeight="271.0" prefWidth="490.0" />
+      <Label layoutX="241.0" layoutY="183.0" prefHeight="45.0" prefWidth="222.0" text="Diagnosis Notes">
+         <font>
+            <Font name="Segoe UI Light" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="467.0" layoutY="505.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" text="Submit" />
+      <Label fx:id="subtitlelabel1" layoutX="235.0" layoutY="101.0" prefHeight="41.0" prefWidth="317.0" text="Enter Patient Identifiers">
+         <font>
+            <Font name="Segoe UI Light" size="14.0" />
+         </font>
+      </Label>
+      <Line endX="-138.0" endY="510.0" layoutX="335.0" layoutY="75.0" startX="-138.0" startY="-75.0" stroke="#a4a4a4" />
    </children>
 </AnchorPane>

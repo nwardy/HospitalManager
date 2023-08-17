@@ -6,11 +6,13 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="500" maxWidth="500" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+   
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8f7ff" height="585.0" layoutX="-2.0" stroke="#cdf5ff" strokeType="INSIDE" width="199.0" />
       <Button layoutX="22.0" layoutY="227.0" mnemonicParsing="false" onAction="#showNewRecord" prefHeight="66.0" prefWidth="152.0" text="New Record" />
       <Button layoutX="22.0" layoutY="307.0" mnemonicParsing="false" onAction="#showAddInfo" prefHeight="66.0" prefWidth="152.0" text="Add Diagnosis Info" />
@@ -19,7 +21,7 @@
       <Button layoutX="22.0" layoutY="384.0" mnemonicParsing="false" onAction="#showAppointments" prefHeight="66.0" prefWidth="152.0" text="Appointments" />
       <Label layoutX="30.0" layoutY="24.0" text="MediHub">
          <font>
-            <Font name="Segoe UI" size="33.0" />
+            <Font name="Segoe UI light" size="33.0" />
          </font>
       </Label>
       <Label layoutX="30.0" layoutY="65.0" prefHeight="20.0" prefWidth="74.0" text="DashBoard">
@@ -32,7 +34,7 @@
 
       <Label fx:id="subtitlelabel" layoutX="232.0" layoutY="26.0" prefHeight="45.0" prefWidth="255.0" text="Patient Quick View">
          <font>
-            <Font name="Segoe UI" size="30.0" />
+            <Font name="Segoe UI light" size="30.0" />
          </font>
          </Label>
       <Button layoutX="22.0" layoutY="384.0" mnemonicParsing="false" onAction="#showAppointments" prefHeight="66.0" prefWidth="152.0" text="Appointments" />
@@ -45,5 +47,11 @@
       <TextField layoutX="257.0" layoutY="138.0" promptText="First" />
       <TextField layoutX="424.0" layoutY="138.0" promptText="Last" />
       <TextField layoutX="594.0" layoutY="138.0" promptText="(123)-456-7890" />
+      <Label fx:id="subtitlelabel1" layoutX="242.0" layoutY="103.0" prefHeight="41.0" prefWidth="144.0" text="Enter Patient Identifiers">
+         <font>
+            <Font name="Segoe UI Light" size="14.0" />
+         </font>
+      </Label>
+      <Line endX="-138.0" endY="510.0" layoutX="335.0" layoutY="75.0" startX="-138.0" startY="-75.0" stroke="#a4a4a4" />
    </children>
 </AnchorPane>

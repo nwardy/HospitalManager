@@ -8,14 +8,19 @@
    -fx-background-radius: 20px;
   	-fx-border-radius: 20px;
     -fx-text-fill: #333333;
-    -fx-font-family: "Haas Grot Text R Web";
+    -fx-font-family: "Segoe UI light";
     -fx-font-size: 14px;
     -fx-font-weight: 500;
     -fx-padding: 10px 12px;
     -fx-text-alignment: center;
     -fx-border-width: 2px;
-    -fx-border-color: #919191
+    -fx-border-color: #a4a4a4
+
     
+}
+.button:hover{
+	
+-fx-background-color: #a4a4a4;
 }
 
 

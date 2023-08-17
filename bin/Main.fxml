@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -18,7 +19,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="408.0" layoutX="328.0" stroke="WHITE" strokeType="INSIDE" width="356.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="415.0" layoutY="-6.0" stroke="WHITE" strokeType="INSIDE" width="328.0">
          <fill>
-            <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+            <LinearGradient endX="0.6066350710900473" endY="1.0" startX="0.7014218009478673">
                <stops>
                   <Stop>
                      <color>
@@ -27,7 +28,7 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.5098039507865906" green="0.7254902124404907" blue="0.8666666746139526" />
+                        <Color red="0.1663011759519577" green="0.5567129850387573" blue="0.8552631735801697" />
                      </color>
                   </Stop>
                </stops>
@@ -35,22 +36,22 @@
          </fill>
       </Rectangle>
       <AnchorPane layoutX="-133.0" layoutY="-158.0" prefHeight="215.0" prefWidth="266.0" />
-      <Button layoutX="444.0" layoutY="276.0" mnemonicParsing="false" onAction="#Login" prefHeight="25.0" prefWidth="110.0" text="Login">
+      <Button layoutX="451.0" layoutY="263.0" mnemonicParsing="false" onAction="#Login" prefHeight="15.0" prefWidth="110.0" text="Login">
          <font>
             <Font name="Segoe UI Light" size="12.0" />
          </font></Button>
-      <TextField fx:id="userIDField" layoutX="380.0" layoutY="144.0" prefHeight="32.0" prefWidth="239.0" promptText="User ID">
+      <TextField fx:id="userIDField" layoutX="387.0" layoutY="144.0" prefHeight="32.0" prefWidth="239.0" promptText="User ID">
          <font>
             <Font name="Segoe UI Light" size="12.0" />
          </font></TextField>
-      <TextField fx:id="passwordField" layoutX="380.0" layoutY="196.0" prefHeight="32.0" prefWidth="239.0" promptText="Password" />
-      <Text fx:id="Title" fontSmoothingType="LCD" layoutX="391.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DocHub Admin" wrappingWidth="216.0">
+      <PasswordField fx:id="passwordField" layoutX="387.0" layoutY="202.0" prefHeight="32.0" prefWidth="239.0" promptText="Password" />
+      <Text fx:id="Title" fontSmoothingType="LCD" layoutX="398.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DocHub Admin" wrappingWidth="216.0">
          <font>
             <Font name="Segoe UI Light" size="32.0" />
          </font>
       </Text>
       <Line endX="-100.0" endY="-195.0" layoutX="428.0" layoutY="195.0" startX="-100.0" startY="213.5" stroke="#a4a4a4" />
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="64.0" layoutY="88.0">
+      <ImageView fitHeight="200.0" fitWidth="216.0" layoutX="48.0" layoutY="88.0">
          <image>
             <Image url="@loginlogo.png" />
          </image>
