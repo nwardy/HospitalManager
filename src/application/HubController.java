@@ -67,7 +67,7 @@ import javafx.fxml.FXMLLoader;
 	    
 	    private void switchView(String fxmlPath) throws IOException {
 	        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
-	        loader.setController(this); // set this instance as the controller
+	        loader.setController(this); 
 	        Parent newRoot = loader.load();
 	        Scene newScene = new Scene(newRoot, 850, 620);
 	        hubStage.setScene(newScene);
